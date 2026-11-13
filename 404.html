@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Page Not Found | Crepe & Waffle Café</title>
+  <meta name="description" content="Oops! The page you are looking for does not exist. Return home to Crepe & Waffle Café.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;450;500;550;600;650;700&family=Outfit:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      if (localStorage.getItem('dir') === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+      }
+    })();
+  </script>
+</head>
+<body class="error-page-body">
+
+  <main class="error-card" role="main">
+    <a class="error-brand" href="index.html" aria-label="Crepe & Waffle Café Home">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M13 31a11 11 0 0 1 22 0M6 36h36M24 4v7M7 13l5 5M41 13l-5 5M3 27h7M38 27h7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span>Crepe &amp; Waffle Café</span>
+    </a>
+
+    <span class="error-badge">404 Error</span>
+    
+    <div class="error-code" aria-hidden="true">404</div>
+
+    <h1 class="error-title">Oops! This plate is empty.</h1>
+
+    <p class="error-desc">
+      Looks like this crêpe flipped right off the griddle. The page you are looking for might have been moved, renamed, or is currently off the menu.
+    </p>
+
+    <div class="error-actions">
+      <a href="index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+  </main>
+
+</body>
+</html>

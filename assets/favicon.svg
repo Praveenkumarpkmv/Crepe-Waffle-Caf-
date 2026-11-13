@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cf7a3f"/>
+      <stop offset="100%" stop-color="#994f26"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8cf6e"/>
+      <stop offset="100%" stop-color="#d99f36"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer circle border for dark/light browser tab contrast -->
+  <circle cx="32" cy="32" r="31" fill="#241a13"/>
+  <circle cx="32" cy="32" r="28" fill="url(#bgGrad)"/>
+  
+  <!-- Steaming iron / crêpe griddle -->
+  <path d="M18 40a14 14 0 0 1 28 0" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M10 46h44" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M32 11v8M13 20l5 5M51 20l-5 5M8 35h7M49 35h7" fill="none" stroke="#fff5ea" stroke-width="3" stroke-linecap="round"/>
+</svg>

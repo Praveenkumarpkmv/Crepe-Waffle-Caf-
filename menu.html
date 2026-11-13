@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Menu — Sweet, Savory, &amp; Specialty Waffles | Crepe & Waffle Café</title>
+  <meta name="description" content="Explore our full café menu: French-style sweet crêpes, buckwheat savory galettes, crispy Belgian waffles, and specialty coffee.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;450;500;550;600;650;700&family=Outfit:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Crepe & Waffle Café home">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M13 31a11 11 0 0 1 22 0M6 36h36M24 4v7M7 13l5 5M41 13l-5 5M3 27h7M38 27h7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span>Crepe & Waffle Café<span class="wordmark-caption">SWEET &amp; SAVORY, MADE COZY</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <div class="dropdown">
+        <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Home</button>
+        <div class="dropdown-content">
+          <a href="index.html">Home 1</a>
+          <a href="home2.html">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="sweet-crepes.html">Sweet Crepes</a>
+      <a href="savory-bites.html">Savory Bites</a>
+      <a href="waffle-specials.html">Waffle Specials</a>
+      <a href="catering.html">Catering</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+            <div class="header-actions">
+      <button type="button" class="icon-button theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <button type="button" class="icon-button rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle text direction" title="Toggle text direction">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 12H3M21 12h-4M12 7l-5 5 5 5"/>
+        </svg>
+      </button>
+
+      <a href="menu.html" class="bag-link" aria-label="Shopping bag">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span class="bag-count">–</span>
+      </a>
+
+      <a href="contact.html" class="header-visit">
+        <span>Book a table</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+        </svg>
+      </a>
+
+      <button type="button" class="mobile-menu icon-button" id="mobile-menu-toggle" aria-label="Open navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+      <!-- Mobile nav backdrop & drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-nav-overlay" id="mobile-nav" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-nav-header">
+      <a class="wordmark" href="index.html">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M13 31a11 11 0 0 1 22 0M6 36h36M24 4v7M7 13l5 5M41 13l-5 5M3 27h7M38 27h7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span>Crepe &amp; Waffle Café</span>
+      </a>
+      <button type="button" class="close-btn" id="mobile-close" aria-label="Close navigation">✕</button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <div class="mobile-nav-group">
+        <span class="mobile-group-title">Home</span>
+        <a href="index.html">Home 1 — Signature Combos</a>
+        <a href="home2.html">Home 2 — Morning Special</a>
+      </div>
+
+      <div class="mobile-nav-group">
+        <span class="mobile-group-title">Menu &amp; Specialties</span>
+        <a href="menu.html" class="active">Our Menu (All 15 Items)</a>
+        <a href="sweet-crepes.html">Sweet Crêpes</a>
+        <a href="savory-bites.html">Savory Bites &amp; Galettes</a>
+        <a href="waffle-specials.html">Waffle Specials</a>
+      </div>
+
+      <div class="mobile-nav-group">
+        <span class="mobile-group-title">About &amp; Visits</span>
+        <a href="about.html">About Our Story</a>
+        <a href="catering.html">Catering &amp; Events</a>
+        <a href="contact.html">Contact, Hours &amp; Map</a>
+      </div>
+    </div>
+
+    <div class="mobile-nav-actions">
+      <a href="contact.html" class="btn btn-primary mobile-cta">
+        Book a table
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-left:4px;">
+          <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+        </svg>
+      </a>
+      <a href="menu.html" class="mobile-bag-cta" aria-label="Shopping bag">
+        <span class="mobile-bag-left">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span>Online Order Bag</span>
+        </span>
+        <span class="bag-count">–</span>
+      </a>
+      <div class="mobile-quick-toggles">
+        <button type="button" class="mobile-toggle-btn theme-toggle-btn" aria-label="Toggle dark mode">
+          <span class="toggle-icon">🌙</span>
+          <span class="toggle-text">Dark Mode</span>
+        </button>
+        <button type="button" class="mobile-toggle-btn rtl-toggle-btn" aria-label="Toggle text direction">
+          <span class="toggle-icon">⇄</span>
+          <span class="toggle-text">RTL Mode</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT (6 SECTIONS) -->
+  <main id="main" class="main-wrap">
+
+    <!-- SECTION 1: BANNER -->
+    <section class="page-banner" id="menu-banner">
+      <span class="sec-label">ALL-DAY BRUNCH &amp; CAFÉ</span>
+      <h1>Our Complete <span>Menu</span></h1>
+      <p>Made fresh to order with pure Canadian dairy, stone-ground flour, and warm smiles. Served all day, every day.</p>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE FILTERED MENU WITH REAL FOOD IMAGES -->
+    <section class="sec sec-menu" id="menu-items">
+      <div class="sec-inner">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Items</button>
+          <button class="filter-btn" data-filter="sweet">Sweet Crepes</button>
+          <button class="filter-btn" data-filter="savory">Savory Bites</button>
+          <button class="filter-btn" data-filter="waffles">Waffle Specials</button>
+          <button class="filter-btn" data-filter="drinks">Coffee &amp; Drinks</button>
+        </div>
+
+        <div class="menu-grid">
+          <!-- Sweet Crepes -->
+          <article class="menu-card" data-category="sweet">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m1.avif" alt="Nutella and Banana Crêpe" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Nutella &amp; Banana Crêpe</h3>
+              <span class="price">$14</span>
+              <p>Silky hazelnut cocoa spread, sliced ripe bananas, and delicate powdered sugar.</p>
+              <span class="tag">Sweet Crepes · Vegetarian</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="sweet">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m2.avif" alt="Berry Bliss Crêpe" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Berry Bliss Crêpe</h3>
+              <span class="price">$15</span>
+              <p>Simmered Ontario berry compote, sweet lemon mascarpone cream, and mint.</p>
+              <span class="tag">Sweet Crepes · Vegetarian</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="sweet">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m3.avif" alt="Salted Caramel Crêpe" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Salted Caramel Crêpe</h3>
+              <span class="price">$15</span>
+              <p>House slow-cooked amber caramel, toasted pecans, Maldon sea salt, and chantilly cream.</p>
+              <span class="tag">Sweet Crepes · Vegetarian</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="sweet">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m4.avif" alt="Lemon Curd and Butter Crêpe" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Lemon Curd &amp; Butter Crêpe</h3>
+              <span class="price">$13</span>
+              <p>French Normandy butter, zesty house Meyer lemon curd, and golden turbinado sugar.</p>
+              <span class="tag">Sweet Crepes · Vegetarian</span>
+            </div>
+          </article>
+
+          <!-- Savory Bites -->
+          <article class="menu-card" data-category="savory">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m5.avif" alt="Ham and Gruyère Galette" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Ham &amp; Gruyère Galette</h3>
+              <span class="price">$16</span>
+              <p>Thin buckwheat galette, Black Forest smoked ham, cave-aged gruyère, and creamy béchamel.</p>
+              <span class="tag">Savory Bites</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="savory">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m6.avif" alt="Spinach and Wild Mushroom Galette" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Spinach &amp; Wild Mushroom</h3>
+              <span class="price">$15</span>
+              <p>Sautéed cremini &amp; oyster mushrooms, baby spinach, crumbled sheep feta, and garlic herb cream.</p>
+              <span class="tag">Savory Bites · Vegetarian</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="savory">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m7.avif" alt="Smoked Salmon Galette" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Smoked Salmon Galette</h3>
+              <span class="price">$18</span>
+              <p>Cold-smoked salmon ribbons, fresh dill crème fraîche, capers, and pickled shallots.</p>
+              <span class="tag">Savory Bites</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="savory">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m8.avif" alt="The Golden Benny" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>The Golden Benny</h3>
+              <span class="price">$22</span>
+              <p>Two poached organic eggs, smoked salmon, house citrus hollandaise on savory waffle crisps.</p>
+              <span class="tag">Savory Bites · House Favorite</span>
+            </div>
+          </article>
+
+          <!-- Waffle Specials -->
+          <article class="menu-card" data-category="waffles">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m9.avif" alt="Buttermilk Chicken and Waffle" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Buttermilk Chicken &amp; Waffle</h3>
+              <span class="price">$21</span>
+              <p>Spiced fried chicken thigh, golden Belgian waffle, whipped maple butter, and hot honey.</p>
+              <span class="tag">Waffle Specials</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="waffles">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m10.avif" alt="Belgian Berry Supreme Waffle" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Belgian Berry Supreme</h3>
+              <span class="price">$16</span>
+              <p>Crispy pearl sugar waffle, macerated strawberries, blueberries, vanilla cream, and dark maple syrup.</p>
+              <span class="tag">Waffle Specials · Vegetarian</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="waffles">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m11.avif" alt="Bacon and Aged Cheddar Waffle" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Bacon &amp; Aged Cheddar Waffle</h3>
+              <span class="price">$17</span>
+              <p>Applewood smoked bacon pieces baked directly into crisp batter, sharp white cheddar, and maple drizzle.</p>
+              <span class="tag">Waffle Specials</span>
+            </div>
+          </article>
+
+          <!-- Coffee & Drinks -->
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m12.avif" alt="Specialty Flat White" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Specialty Flat White</h3>
+              <span class="price">$4.75</span>
+              <p>Double ristretto espresso pulled over velvety textured whole or oat milk.</p>
+              <span class="tag">Coffee &amp; Drinks</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m13.avif" alt="Uji Matcha Latte" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Uji Matcha Latte</h3>
+              <span class="price">$5.50</span>
+              <p>Ceremonial grade Japanese green tea whisked with steamed oat milk and Madagascar vanilla.</p>
+              <span class="tag">Coffee &amp; Drinks · Vegan</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m14.avif" alt="Fresh Squeezed Citrus Juice" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Fresh Squeezed Citrus Juice</h3>
+              <span class="price">$6.00</span>
+              <p>Cold-pressed Florida Valencia oranges and ruby grapefruits. Pure and vibrant.</p>
+              <span class="tag">Coffee &amp; Drinks</span>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="drinks">
+            <div class="menu-card-img-wrap">
+              <img src="assets/m16.avif" alt="Salted Caramel Cold Brew" class="menu-card-img">
+            </div>
+            <div class="menu-card-body">
+              <h3>Salted Caramel Cold Brew</h3>
+              <span class="price">$5.25</span>
+              <p>Slow-steeped 18-hour single origin cold brew topped with house salted caramel foam.</p>
+              <span class="tag">Coffee &amp; Drinks</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SWEET CRÊPES SPOTLIGHT SPLIT -->
+    <section class="sec sec-sweet" id="menu-sweet-spotlight">
+      <div class="sec-inner">
+        <div class="split-layout">
+          <div class="split-content">
+            <span class="sec-label">HOUSE FAVORITE COMBOS</span>
+            <h2 class="sec-title">Simmered berry compotes &amp; rich chocolates.</h2>
+            <p>Our sweet crêpes are spun extra thin on cast-iron disks heated to 200°C. We top them with house-simmered Ontario fruit compotes, French butter, and rich spreads.</p>
+            <p>Looking for a gluten-friendly sweet option? We can spin any sweet combination on our 100% buckwheat batter upon request.</p>
+            <a href="sweet-crepes.html" class="link-arrow">Browse our dedicated Sweet Crepes menu
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+              </svg>
+            </a>
+          </div>
+          <div class="split-media">
+            <img src="assets/m17.avif" alt="Plated sweet crêpes with berries">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BARISTA PROGRAM SPLIT -->
+    <section class="sec sec-savory" id="menu-coffee-spotlight">
+      <div class="sec-inner">
+        <div class="split-layout reverse">
+          <div class="split-content">
+            <span class="sec-label">ESPRESSO &amp; BEVERAGES</span>
+            <h2 class="sec-title">The Perfect Companion to Every Dish</h2>
+            <p>We source single-origin seasonal beans and balance them with rich Ontario dairy or barista-grade oat milk. Whether you crave a silky flat white, an iced shaken espresso, or a loose-leaf Earl Grey, we brew each cup to order.</p>
+            <p>All syrups (caramel, Madagascar vanilla, lavender) are simmered in-house from whole organic ingredients without chemical additives.</p>
+            <a href="contact.html" class="btn btn-outline" style="margin-top:1rem;">Reserve Table for Morning Coffee</a>
+          </div>
+          <div class="split-media">
+            <img src="assets/m18.avif" alt="Barista poured specialty flat white on sunny table">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: DIETARY & ALLERGEN GUIDANCE -->
+    <section class="sec sec-waffle" id="menu-dietary">
+      <div class="sec-inner">
+        <div class="sec-header">
+          <span class="sec-label">DIETARY INCLUSIVITY</span>
+          <h2 class="sec-title">Everyone Deserves Great Brunch</h2>
+          <div class="sec-divider"></div>
+          <p class="sec-desc">We work meticulously to keep our kitchen welcoming for all dietary preferences.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">🌾</div>
+            <h3>Buckwheat Galettes</h3>
+            <p>100% pure buckwheat batter is naturally gluten-free. Ideal for savory lovers looking to avoid gluten.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🥛</div>
+            <h3>Dairy-Free Milks</h3>
+            <p>We offer barista-edition organic oat milk and almond milk at no extra charge on all specialty coffees.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🥑</div>
+            <h3>Plant-Based Options</h3>
+            <p>Ask for our vegan cheese, fresh avocado, and dairy-free coconut whipped cream substitutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: TAKEOUT & BOOKINGS SPLIT -->
+    <section class="sec sec-catering" id="menu-cta">
+      <div class="sec-inner">
+        <div class="split-layout">
+          <div class="split-content">
+            <span class="sec-label">VISIT OR ORDER TO-GO</span>
+            <h2 class="sec-title">Dine In or Pick Up Hot to Go</h2>
+            <p>In a hurry? We carefully package our crêpes and waffle platters in thermal eco-friendly boxes so your breakfast stays hot and crispy on the walk home.</p>
+            <p>Prefer to dine in? Drop in anytime during open hours, or book a table ahead for weekend groups.</p>
+            <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+              <a href="contact.html" class="btn btn-primary" style="background:var(--gold); color:#2e1f14;">Book Table &amp; Contact</a>
+              <a href="catering.html" class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.4);">Order Event Catering</a>
+            </div>
+          </div>
+          <div class="split-media">
+            <img src="assets/m19.avif" alt="Dine-in warm seating in café">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div>
+        <a class="wordmark" href="index.html">
+          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M13 31a11 11 0 0 1 22 0M6 36h36M24 4v7M7 13l5 5M41 13l-5 5M3 27h7M38 27h7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span>Crepe & Waffle Café</span>
+        </a>
+        <p>Fluffy crêpes. Golden waffles.<br>A little sunshine, whatever the weather.</p>
+        <span class="eyebrow">TORONTO, ONTARIO</span>
+      </div>
+      <div class="footer-links">
+        <span class="eyebrow">NAVIGATION</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="menu.html">Our menu</a>
+        <a href="catering.html">Catering</a>
+        <a href="contact.html">Contact &amp; Reservations</a>
+      </div>
+      <div class="footer-links">
+        <span class="eyebrow">SPECIALTIES</span>
+        <a href="sweet-crepes.html">Sweet Crepes</a>
+        <a href="savory-bites.html">Savory Bites</a>
+        <a href="waffle-specials.html">Waffle Specials</a>
+        <a href="contact.html">Book a table</a>
+      </div>
+    </div>
+    <div class="footer-display" aria-hidden="true">crepe & waffle.</div>
+    <div class="footer-bottom">
+      <span>© 2026 Crepe & Waffle Café</span>
+      <span>GOOD MORNINGS ARE FOR EVERYONE.</span>
+      <a href="#main">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
